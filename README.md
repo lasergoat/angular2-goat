@@ -1,4 +1,6 @@
-#Angular 2 Go !
+#Angular 2 GOAT !
+
+The tinder of Goats!
 
 [![Join the chat at https://gitter.im/johnpapa/angular2-go](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/johnpapa/angular2-go?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
