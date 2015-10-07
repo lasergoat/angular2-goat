@@ -1,7 +1,7 @@
 import {Component, NgFor, NgIf, View} from 'angular2/angular2';
 import {Router} from 'angular2/router';
-import {GoatService} from './goat.service';
 import {Goat} from './goat';
+import {GoatService} from './goat.service';
 
 @Component({ selector: 'my-dashboard' })
 @View({
@@ -33,13 +33,13 @@ import {Goat} from './goat';
         .goats li { cursor: pointer; }
         .goats li:hover {color: #369; background-color: #EEE; }
     `]
-
 })
+
 export class DashboardComponent {
   private _goats: Goat[];
   public currentGoat: Goat;
 
-  constructor(private _goatService: GoatsService) { }
+  constructor(private _goatService: GoatService) { }
 
   get goats() {
     return this._goats || this.getGoats()
