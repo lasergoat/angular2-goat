@@ -19,7 +19,7 @@ export class GoatService {
 var GOATS : Goats[] = [
    {
        profileOpen: false,
-       name: 'Billy',
+       name: 'Billy Styles',
        image: 'cautious.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -32,7 +32,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'creepy',
+       name: 'Creepy Goat',
        image: 'creepy.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -45,7 +45,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'cute_2',
+       name: 'Bartle Doo',
        image: 'cute_2.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -58,7 +58,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'cute',
+       name: 'Willaim Hopperton',
        image: 'cute.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -71,7 +71,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'mountain',
+       name: 'Angule Ar Sucks',
        image: 'mountain.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -84,7 +84,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'old_2',
+       name: 'Old Man-Goat',
        image: 'old_2.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -97,7 +97,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'old',
+       name: 'Dr. Test Tickle',
        image: 'old.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -110,7 +110,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'peppy',
+       name: 'Pervy Longstockings',
        image: 'peppy.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -123,7 +123,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'wise',
+       name: "Leggy Blonde",
        image: 'wise.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
