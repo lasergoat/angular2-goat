@@ -28,6 +28,12 @@
   border-radius: 50%;
   border: none;
   box-shadow: 0 1px 0 #e4e4e4, 0 0 0 1rem #f1f1f1;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  outline: none !important;
+}
+.t-button:active {
+  box-shadow: 0 0 0 #e4e4e4, 0 0 0 1rem #f1f1f1;
 }
 .t-button[class*="like"] {
   height: 6.5rem;
@@ -48,6 +54,7 @@
   margin-left: auto;
   margin-right: auto;
   background: white;
+  overflow: hidden;
 }
 
 .t-header {
