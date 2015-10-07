@@ -33,6 +33,7 @@ import {Goat} from './goat';
         .goats li { cursor: pointer; }
         .goats li:hover {color: #369; background-color: #EEE; }
     `]
+
 })
 export class DashboardComponent {
   private _goats: Goat[];
