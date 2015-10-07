@@ -21,9 +21,15 @@ import {GoatService} from './goat.service';
 	        </div>
 
           <div class="t-buttons">
-            <button class="t-button dislike"></button>
-            <button class="t-button info"></button>
-            <button class="t-button like"></button>
+            <button class="t-button dislike">
+							<i class="fa fa-close fa-3x"></i>
+            </button>
+            <button class="t-button info">
+							<i class="fa fa-info fa-2x"></i>
+            </button>
+            <button class="t-button like">
+							<i class="fa fa-heart fa-3x"></i>
+            </button>
           </div>
         </main>
        </div>
