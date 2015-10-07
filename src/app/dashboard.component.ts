@@ -90,6 +90,10 @@ export class DashboardComponent {
 
   public swipe(liked: bool) {
 
+    if (!this._goats.length) {
+      return;
+    }
+
     if (!liked) {
 
       this._goats[this.currentGoat].liked = false;
@@ -100,11 +104,6 @@ export class DashboardComponent {
           .then(goats => {
 
             this._goats = goats;
-            this.currentGoat--;
-
-            if (this.currentGoat < 0) {
-              this.currentGoat = this._goats.length - 1;
-            }
 
           });
 
