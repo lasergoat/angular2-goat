@@ -19,7 +19,8 @@ import {GoatService} from './goat.service';
               <div class="t-info">
                   <span class="t-name">{{goat.name}}</span><span class="t-age">, {{goat.age}}</span>
               </div>
-              <div class="goat-profile" *ng-if="goat.profileOpen">
+
+              <div class="goat-profile" *ng-if="goat.profileOpen === true">
                 <span class="goat-location">{{goat.location}}</span>
                 <span class="goat-distance">{{goat.distance}}</span>
                 <p class="goat-bio">{{goat.bio}}</p>
@@ -77,8 +78,10 @@ export class DashboardComponent {
     };
   }
 
-  public profileOpen(goat: Goat) {
-    this._goat[this.currentGoat].profileOpen = !this._goat[this.currentGoat].profileOpen;
+  public profileOpen() {
+
+    this._goats[this.currentGoat].profileOpen = !this._goats[this.currentGoat].profileOpen;
+
   }
 
   public swipe(liked: bool) {
