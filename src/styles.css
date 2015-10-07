@@ -257,6 +257,15 @@ body {
 }
 
 .t-goat.matched ~ .t-match {
-  opacity: 1;
+  animation: match 3s ease-in-out forwards;
   z-index: 10;
+  pointer-events: none;
+}
+
+@keyframes match {
+  from {
+    opacity: 0;
+  }
+  50%, 75% { opacity: 1; }
+  to { opacity: 0;}
 }
