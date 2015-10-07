@@ -12,7 +12,7 @@ export class GoatService {
 
     removeGoat(index: number) {
         return Promise.resolve(GOATS)
-            .then((goats) => { return goats.splice(index, 1) });
+            .then((goats) => { goats.splice(index, 1); return goats; });
     }
 }
 
