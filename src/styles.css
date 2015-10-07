@@ -205,3 +205,36 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.goat-profile {
+  height: 100%;
+  background: white;
+  display: block;
+  padding: 1rem;
+  animation: pro 0.5s ease-in-out forwards;
+}
+
+@keyframes pro {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-1rem);
+    -ms-transform: translateY(-1rem);
+    -o-transform: translateY(-1rem);
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+.goat-location, .goat-distance {
+  font-size: 1.5rem;
+}
+
+.goat-distance {
+  font-weight: 300;
+}
+
+.goat-last-active {
+  opacity: 0.5;
+}
