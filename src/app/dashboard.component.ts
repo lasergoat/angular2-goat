@@ -9,6 +9,7 @@ import {GoatService} from './goat.service';
       <div class="t-app">
         <header class="t-header">goatinder</header>
         <main class="t-main">
+
           <div class="t-goats">
 
             <div *ng-for="#goat of goats" class="t-goat" [ng-class]="getClass(goat)">
@@ -26,9 +27,16 @@ import {GoatService} from './goat.service';
           </div>
 
           <div class="t-buttons">
-            <button (click)="swipe(false)" class="t-button dislike"></button>
-            <button (click)="openProfile(goat)" class="t-button info"></button>
-            <button (click)="swipe(true)" class="t-button like"></button>
+            <button (click)="swipe(false)" class="t-button dislike">
+              <i class="fa fa-close fa-3x"></i>
+            </button>
+            <button (click)="openProfile(goat)" class="t-button info">
+              <i class="fa fa-info fa-2x"></i>
+            </button>
+            <button (click)="swipe(true)" class="t-button like">
+              <i class="fa fa-heart fa-3x"></i>
+            </button>
+
           </div>
         </main>
        </div>

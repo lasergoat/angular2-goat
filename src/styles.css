@@ -28,16 +28,22 @@
 .t-button[class*="like"] {
   height: 6.5rem;
   width: 6.5rem;
+  color: #4bdaa3;
+}
+.t-button.dislike {
+  color: #fb5223;
 }
 .t-button.info {
   height: 4rem;
   width: 4rem;
+  color: #2a67eb;
 }
 
 .t-app {
   width: 400px;
   margin-left: auto;
   margin-right: auto;
+  background: white;
 }
 
 .t-header {
@@ -86,20 +92,64 @@
   -webkit-transform: translateY(0) scale(1);
       -ms-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-          transition: transform 0.3s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+  z-index: 3;
 }
-.t-goat:nth-child(2) {
+.t-goat:before {
+  content: '';
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
+.t-goat.liked {
+  -webkit-transform: translateX(100%) rotate(35deg);
+      -ms-transform: translateX(100%) rotate(35deg);
+          transform: translateX(100%) rotate(35deg);
+  opacity: 0;
+}
+.t-goat.disliked {
+  -webkit-transform: translateX(-100%) rotate(-35deg);
+      -ms-transform: translateX(-100%) rotate(-35deg);
+          transform: translateX(-100%) rotate(-35deg);
+  opacity: 0;
+}
+.t-goat.liked:before, .t-goat.disliked:before {
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: currentColor;
+  border-radius: 3px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  opacity: 1;
+}
+.t-goat.liked:before {
+  content: 'LIKED';
+  color: #4bdaa3;
+}
+.t-goat.disliked:before {
+  content: 'DISLIKED';
+  color: #fb5223;
+  left: initial;
+  right: 1rem;
+}
+.t-goat:nth-of-type(2) {
   -webkit-transform: translateY(0.5rem) scale(0.98);
       -ms-transform: translateY(0.5rem) scale(0.98);
           transform: translateY(0.5rem) scale(0.98);
-  z-index: -1;
+  z-index: 2;
 }
-.t-goat:nth-child(3) {
+.t-goat:nth-of-type(3) {
   -webkit-transform: translateY(1rem) scale(0.96);
       -ms-transform: translateY(1rem) scale(0.96);
           transform: translateY(1rem) scale(0.96);
-  z-index: -2;
+  z-index: 1;
+}
+.t-goat:nth-of-type(3) ~ .t-goat {
+  display: none;
 }
 
 *, *:before, *:after {
@@ -108,10 +158,26 @@
 }
 
 body, html {
+  background: #222;
   font-family: Source Sans Pro, sans-serif;
   padding: 0;
   margin: 0;
   height: 100%;
   width: 100%;
   display: block;
+}
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
