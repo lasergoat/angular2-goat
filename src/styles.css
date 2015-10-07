@@ -136,17 +136,20 @@
   left: initial;
   right: 1rem;
 }
-.t-goat:nth-child(2) {
+.t-goat:nth-of-type(2) {
   -webkit-transform: translateY(0.5rem) scale(0.98);
       -ms-transform: translateY(0.5rem) scale(0.98);
           transform: translateY(0.5rem) scale(0.98);
   z-index: 2;
 }
-.t-goat:nth-child(3) {
+.t-goat:nth-of-type(3) {
   -webkit-transform: translateY(1rem) scale(0.96);
       -ms-transform: translateY(1rem) scale(0.96);
           transform: translateY(1rem) scale(0.96);
   z-index: 1;
+}
+.t-goat:nth-of-type(3) ~ .t-goat {
+  display: none;
 }
 
 *, *:before, *:after {

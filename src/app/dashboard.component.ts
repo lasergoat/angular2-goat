@@ -10,7 +10,6 @@ import {GoatService} from './goat.service';
         <header class="t-header">goatinder</header>
         <main class="t-main">
 	        <div class="t-goats">
-
 	          <div *ng-for="#goat of goats" class="t-goat" (click)="onSelect(goat)">
 	            <img src="images/{{goat.image}}" alt="" class="t-photo">
 	            <div class="t-info">
