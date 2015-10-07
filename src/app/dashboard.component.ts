@@ -97,11 +97,16 @@ export class DashboardComponent {
       setTimeout(() => {
 
         this._goatService.removeGoat(this.currentGoat)
-          .then(goats => this._goats = goats);
-        this.currentGoat--;
-        if (this.currentGoat < 0) {
-          this.currentGoat = this.currentGoat.length - 1;
-        }
+          .then(goats => {
+
+            this._goats = goats;
+            this.currentGoat--;
+
+            if (this.currentGoat < 0) {
+              this.currentGoat = this._goats.length - 1;
+            }
+
+          });
 
       }, 2000);
 
@@ -109,6 +114,9 @@ export class DashboardComponent {
 
       this._goats[this.currentGoat].liked = true;
       this.currentGoat++;
+      if (this.currentGoat >= this.currentGoat.length) {
+        this.currentGoat = 0;
+      }
     }
   };
 
