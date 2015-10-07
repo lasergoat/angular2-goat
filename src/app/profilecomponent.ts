@@ -18,12 +18,6 @@ import {GoatService} from './goat.service';
                   <span class="t-name">{{goat.name}}</span>
                   <span class="t-age">{{goat.age}}</span>
               </div>
-              <div class="goat-profile" *ng-if="goat.profileOpen">
-                <span class="goat-location">{{goat.location}}</span>
-                <span class="goat-distance">{{goat.distance}}</span>
-                <p class="goat-bio">{{goat.bio}}</p>
-                <p class="goat-last-active">{{goat.lastActive}}</p>
-              </div>
             </div>
 
             <div class="no-goats" *ng-if="goats.length < 1">
@@ -36,7 +30,7 @@ import {GoatService} from './goat.service';
             <button (click)="swipe(false)" class="t-button dislike">
               <i class="fa fa-close fa-3x"></i>
             </button>
-            <button (click)="profileOpen()" class="t-button info">
+            <button (click)="openProfile(goat)" class="t-button info">
               <i class="fa fa-info fa-2x"></i>
             </button>
             <button (click)="swipe(true)" class="t-button like">
@@ -76,10 +70,6 @@ export class DashboardComponent {
     };
   }
 
-  public profileOpen(goat: Goat) {
-    this._goat[this.currentGoat].profileOpen = !this._goat[this.currentGoat].profileOpen;
-  }
-
   public swipe(liked: bool) {
 
     if (!liked) {
@@ -90,17 +80,12 @@ export class DashboardComponent {
 
         this._goatService.removeGoat(this.currentGoat)
           .then(goats => this._goats = goats);
-        this.currentGoat--;
-        if (this.currentGoat < 0) {
-          this.currentGoat = this.currentGoat.length - 1;
-        }
 
       }, 2000);
 
     } else {
 
       this._goats[this.currentGoat].liked = true;
-      this.currentGoat++;
     }
   };
 

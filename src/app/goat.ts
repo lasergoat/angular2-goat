@@ -1,5 +1,6 @@
 export interface Goat {
     id: number;
+    profileOpen: boolean;
     name: string;
     image: string;
     age: number;
@@ -7,6 +8,6 @@ export interface Goat {
     location: string;
     likesYou: boolean;
     liked: boolean;
-    distance: number; // miles
-    lastActive: number; // minutes ago
+    distance: string; // miles
+    lastActive: string; // minutes ago
 }
