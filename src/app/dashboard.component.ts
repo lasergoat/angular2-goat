@@ -32,6 +32,10 @@ import {GoatService} from './goat.service';
               No Goat Matches Found :-(
             </div>
 
+            <div class="t-match">
+            	<h1>It's a match!</h1>
+            </div>
+
           </div>
 
           <div class="t-buttons">

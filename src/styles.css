@@ -238,3 +238,25 @@ body {
 .goat-last-active {
   opacity: 0.5;
 }
+
+.t-match {
+  opacity: 0;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: calc(100% + 2rem);
+  height: 200%;
+  background: rgba(0,0,0,0.8);
+  z-index: 9;
+  text-align: center;
+  color: white;
+  font-family: Oleo Script, sans-serif;
+  font-size: 3rem;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.t-goat.match ~ .t-match {
+  opacity: 1;
+  z-index: 10;
+}
