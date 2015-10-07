@@ -78,7 +78,7 @@ export class DashboardComponent {
     return {
       'liked': goat.liked === true,
       'disliked': goat.liked === false,
-      'matched': goat.likedYou === true && goat.liked,
+      'matched': goat.likesYou === true && goat.liked,
     };
   }
 

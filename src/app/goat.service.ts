@@ -22,7 +22,7 @@ var GOATS : Goats[] = [
        name: 'Billy Styles',
        image: 'cautious.png',
        liked: null,
-       likesYou: Math.random() >= 0.5,
+       likesYou: false,
        age: 28,
        id: 11,
        bio: 'Lifelong introvert. Unable to type with boxing gloves on. Unapologetic social media lover.',
