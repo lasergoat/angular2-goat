@@ -20,6 +20,8 @@ var GOATS : Goats[] = [
    {
        name: 'Billy',
        image: 'cautious.png',
+       liked: null,
+       likesYou: false,
        age: 28,
        id: 11,
        bio: 'Lifelong introvert. Unable to type with boxing gloves on. Unapologetic social media lover.',
@@ -30,6 +32,8 @@ var GOATS : Goats[] = [
    {
        name: 'creepy',
        image: 'creepy.png',
+       liked: null,
+       likesYou: false,
        age: 31,
        id: 12,
        bio: 'Communicator. Coffee practitioner. Writer. Lifelong entrepreneur. Social media buff. Infuriatingly humble student.',
@@ -40,6 +44,8 @@ var GOATS : Goats[] = [
    {
        name: 'cute_2',
        image: 'cute_2.png',
+       liked: null,
+       likesYou: false,
        age: 18,
        id: 13,
        bio: 'Evil web evangelist. Music enthusiast. Pop culture guru. Total explorer. Thinker. Student.',
@@ -50,6 +56,8 @@ var GOATS : Goats[] = [
    {
        name: 'cute',
        image: 'cute.png',
+       liked: null,
+       likesYou: false,
        age: 18,
        id: 14,
        bio: 'Creator. Evil beer practitioner. Avid tv guru. Pop culture evangelist. Coffee fan.',
@@ -60,6 +68,8 @@ var GOATS : Goats[] = [
    {
        name: 'mountain',
        image: 'mountain.png',
+       liked: null,
+       likesYou: false,
        age: 43,
        id: 15,
        bio: 'Writer. Thinker. Proud tv evangelist. Web junkie. Professional explorer. Amateur music scholar. Pop culture lover.',
@@ -70,6 +80,8 @@ var GOATS : Goats[] = [
    {
        name: 'old_2',
        image: 'old_2.png',
+       liked: null,
+       likesYou: false,
        age: 63,
        id: 16,
        bio: 'Prone to fits of apathy. Introvert. Zombie ninja. Unapologetic troublemaker. Tv fanatic. Extreme food buff. Creator.',
@@ -80,6 +92,8 @@ var GOATS : Goats[] = [
    {
        name: 'old',
        image: 'old.png',
+       liked: null,
+       likesYou: false,
        age: 59,
        id: 17,
        bio: 'Evil social media specialist. Thinker. Passionate bacon scholar. Incurable internet fanatic.',
@@ -90,6 +104,8 @@ var GOATS : Goats[] = [
    {
        name: 'peppy',
        image: 'peppy.png',
+       liked: null,
+       likesYou: false,
        age: 22,
        id: 18,
        bio: 'Passionate music junkie. Proud troublemaker. Gamer. Avid pop culture geek. Evil social media practitioner. Explorer.',
@@ -100,6 +116,8 @@ var GOATS : Goats[] = [
    {
        name: 'wise',
        image: 'wise.png',
+       liked: null,
+       likesYou: false,
        age: 64,
        id: 19,
        bio: 'Hipster-friendly internet junkie. Wannabe student. Twitter practitioner.',

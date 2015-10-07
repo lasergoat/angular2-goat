@@ -1,4 +1,4 @@
-import {Component, NgFor, NgIf, View} from 'angular2/angular2';
+import {Component, NgClass, NgFor, NgIf, View} from 'angular2/angular2';
 import {Router} from 'angular2/router';
 import {Goat} from './goat';
 import {GoatService} from './goat.service';
@@ -11,7 +11,7 @@ import {GoatService} from './goat.service';
         <main class="t-main">
           <div class="t-goats">
 
-            <div *ng-for="#goat of goats" class="t-goat">
+            <div *ng-for="#goat of goats" class="t-goat" [ng-class]="getClass(goat)">
               <img src="images/{{goat.image}}" alt="" class="t-photo">
               <div class="t-info">
                   <span class="t-name">{{goat.name}}</span>
@@ -33,7 +33,7 @@ import {GoatService} from './goat.service';
         </main>
        </div>
     `,
-    directives: [NgFor, NgIf],
+    directives: [NgFor, NgIf, NgClass],
     // directives: [FORM_DIRECTIVES]
     styles: [`
         .goats {list-style-type: none; margin-left: 1em; padding: 0; width: 14em;}
@@ -54,13 +54,30 @@ export class DashboardComponent {
     return this._goats || this.getGoats()
   }
 
+  getClass(goat: Goat) {
+    return {
+      'liked': goat.liked === true,
+      'disliked': goat.liked === false,
+      'matched': goat.likedYou === true && goat.liked,
+    };
+  }
+
   public swipe(liked: bool) {
 
     if (!liked) {
 
-      this._goatService.removeGoat(this.currentGoat)
-        .then(goats => this._goats = goats);
+      this._goats[this.currentGoat].liked = false;
 
+      setTimeout(() => {
+
+        this._goatService.removeGoat(this.currentGoat)
+          .then(goats => this._goats = goats);
+
+      }, 2000);
+
+    } else {
+
+      this._goats[this.currentGoat].liked = true;
     }
   };
 

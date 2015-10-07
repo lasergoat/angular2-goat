@@ -5,6 +5,8 @@ export interface Goat {
     age: number;
     bio: string;
     location: string;
+    likesYou: boolean;
+    liked: boolean;
     distance: number; // miles
     lastActive: number; // minutes ago
 }
