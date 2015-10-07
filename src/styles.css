@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300);
+.t-age {
+  font-weight: 300;
+}
+
 .t-buttons {
   display: -webkit-box;
   display: -webkit-flex;
@@ -48,9 +52,16 @@
 
 .t-header {
   font-size: 21px;
-  padding: 1rem;
+  padding: 0 1rem;
   color: #e8684d;
   border-bottom: 2px solid #e4e4e4;
+}
+.t-header > span {
+  padding: 1rem 0;
+  z-index: 2;
+  display: inline-block;
+  border-bottom: 2px solid #e8684d;
+  margin-bottom: -2px;
 }
 
 .t-photo {
@@ -115,8 +126,12 @@
           transform: translateX(-100%) rotate(-35deg);
   opacity: 0;
 }
+.t-goat.liked, .t-goat.disliked {
+  z-index: 10;
+}
 .t-goat.liked:before, .t-goat.disliked:before {
   font-size: 1rem;
+  font-weight: 700;
   padding: 0.25rem;
   border-width: 2px;
   border-style: solid;
@@ -126,6 +141,7 @@
   top: 1rem;
   left: 1rem;
   opacity: 1;
+  z-index: 10;
 }
 .t-goat.liked:before {
   content: 'LIKED';
@@ -137,19 +153,19 @@
   left: initial;
   right: 1rem;
 }
-.t-goat:nth-of-type(2) {
+.t-goat:not([class*="liked"]) + .t-goat:not([class*="liked"]) {
   -webkit-transform: translateY(0.5rem) scale(0.98);
       -ms-transform: translateY(0.5rem) scale(0.98);
           transform: translateY(0.5rem) scale(0.98);
   z-index: 2;
 }
-.t-goat:nth-of-type(3) {
+.t-goat:not([class*="liked"]) + .t-goat:not([class*="liked"]) + .t-goat:not([class*="liked"]) {
   -webkit-transform: translateY(1rem) scale(0.96);
       -ms-transform: translateY(1rem) scale(0.96);
           transform: translateY(1rem) scale(0.96);
   z-index: 1;
 }
-.t-goat:nth-of-type(3) ~ .t-goat {
+.t-goat:not([class*="liked"]) + .t-goat:not([class*="liked"]) + .t-goat:not([class*="liked"]) ~ .t-goat {
   display: none;
 }
 

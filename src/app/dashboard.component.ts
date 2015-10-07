@@ -7,7 +7,9 @@ import {GoatService} from './goat.service';
 @View({
     template: `
       <div class="t-app">
-        <header class="t-header">Goatinder</header>
+
+        <header class="t-header"><span>goatinder</span></header>
+
         <main class="t-main">
 
           <div class="t-goats">
@@ -15,8 +17,7 @@ import {GoatService} from './goat.service';
             <div *ng-for="#goat of goats" class="t-goat" [ng-class]="getClass(goat)">
               <img src="images/{{goat.image}}" alt="" class="t-photo">
               <div class="t-info">
-                  <span class="t-name">{{goat.name}}</span>
-                  <span class="t-age">{{goat.age}}</span>
+                  <span class="t-name">{{goat.name}}</span><span class="t-age">, {{goat.age}}</span>
               </div>
               <div class="goat-profile" *ng-if="goat.profileOpen">
                 <span class="goat-location">{{goat.location}}</span>
