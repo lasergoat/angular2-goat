@@ -19,7 +19,7 @@ export class GoatService {
 var GOATS : Goats[] = [
    {
        profileOpen: false,
-       name: 'Billy Styles',
+       name: 'Lucky Carrot Jr.',
        image: 'cautious.png',
        liked: null,
        likesYou: false,
@@ -32,7 +32,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'Creepy Goat',
+       name: 'Malfunctioning Goat',
        image: 'creepy.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -45,7 +45,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'Bartle Doo',
+       name: 'Sergio\'s Yak',
        image: 'cute_2.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -58,7 +58,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'Willaim Hopperton',
+       name: 'Willaimshire Hopperton',
        image: 'cute.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -71,7 +71,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'Angule Ar Sucks',
+       name: 'Farting Garbageman',
        image: 'mountain.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -84,7 +84,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: 'Old Man-Goat',
+       name: 'Angule Ar Sucks',
        image: 'old_2.png',
        liked: null,
        likesYou: Math.random() >= 0.5,
@@ -123,7 +123,7 @@ var GOATS : Goats[] = [
    },
    {
        profileOpen: false,
-       name: "Leggy Blonde",
+       name: "Dev Sadness",
        image: 'wise.png',
        liked: null,
        likesYou: Math.random() >= 0.5,

@@ -24,7 +24,7 @@ import {GoatService} from './goat.service';
                 <span class="goat-location">{{goat.location}}</span>
                 <span class="goat-distance">{{goat.distance}}</span>
                 <p class="goat-bio">{{goat.bio}}</p>
-                <p class="goat-last-active">{{goat.lastActive}}</p>
+                <p class="goat-last-active">Active {{goat.lastActive}}</p>
               </div>
             </div>
 
