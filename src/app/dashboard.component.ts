@@ -4,15 +4,15 @@ import {Component, FORM_DIRECTIVES, View} from 'angular2/angular2';
 @View({
 	template: `
 		<div class="t-app">
-		  <header class="t-header"></header>
+		  <header class="t-header">goatinder</header>
 		  <main class="t-main">
 		    <div class="t-goats">
 		      <!-- goats go here -->
 		      <div class="t-goat">
-		        <img src="" alt="" class="t-photo">
+		        <img src="../images/old.png" alt="" class="t-photo">
 		        <div class="t-info">
-		          <span class="t-name"></span>
-		          <span class="t-age"></span>
+		          <span class="t-name">Billy</span>
+		          <span class="t-age">20</span>
 		        </div>
 		      </div>
 		  
