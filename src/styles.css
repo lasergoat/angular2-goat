@@ -28,10 +28,15 @@
 .t-button[class*="like"] {
   height: 6.5rem;
   width: 6.5rem;
+  color: #4bdaa3;
+}
+.t-button.dislike {
+  color: #fb5223;
 }
 .t-button.info {
   height: 4rem;
   width: 4rem;
+  color: #2a67eb;
 }
 
 .t-app {
