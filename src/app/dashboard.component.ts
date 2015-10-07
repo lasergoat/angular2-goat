@@ -6,24 +6,29 @@ import {GoatService} from './goat.service';
 @Component({ selector: 'my-dashboard' })
 @View({
     template: `
-    	<div class="t-app">
+      <div class="t-app">
         <header class="t-header">goatinder</header>
         <main class="t-main">
-	        <div class="t-goats">
+          <div class="t-goats">
 
-	          <div *ng-for="#goat of goats" class="t-goat" (click)="onSelect(goat)">
-	            <img src="images/{{goat.image}}" alt="" class="t-photo">
-	            <div class="t-info">
-	                <span class="t-name">{{goat.name}}</span>
-	                <span class="t-age">{{goat.age}}</span>
-	            </div>
-	          </div>
-	        </div>
+            <div *ng-for="#goat of goats" class="t-goat">
+              <img src="images/{{goat.image}}" alt="" class="t-photo">
+              <div class="t-info">
+                  <span class="t-name">{{goat.name}}</span>
+                  <span class="t-age">{{goat.age}}</span>
+              </div>
+            </div>
+
+            <div class="no-goats" *ng-if="goats.length < 1">
+              No Goat Matches Found :-(
+            </div>
+
+          </div>
 
           <div class="t-buttons">
-            <button class="t-button dislike"></button>
-            <button class="t-button info"></button>
-            <button class="t-button like"></button>
+            <button (click)="swipe(false)" class="t-button dislike"></button>
+            <button (click)="openProfile(goat)" class="t-button info"></button>
+            <button (click)="swipe(true)" class="t-button like"></button>
           </div>
         </main>
        </div>
@@ -34,12 +39,14 @@ import {GoatService} from './goat.service';
         .goats {list-style-type: none; margin-left: 1em; padding: 0; width: 14em;}
         .goats li { cursor: pointer; }
         .goats li:hover {color: #369; background-color: #EEE; }
+        .no-goats {text-align: center; margin-top: 10px;}
     `]
 })
 
 export class DashboardComponent {
+
   private _goats: Goat[];
-  public currentGoat: Goat;
+  public currentGoat: number;
 
   constructor(private _goatService: GoatService) { }
 
@@ -47,7 +54,17 @@ export class DashboardComponent {
     return this._goats || this.getGoats()
   }
 
-  onSelect(goat: Goat) { this.currentGoat = goat; }
+  public swipe(liked: bool) {
+
+    if (!liked) {
+
+      this._goatService.removeGoat(this.currentGoat)
+        .then(goats => this._goats = goats);
+
+    }
+  };
+
+  // onSelect(goat: Goat) { this.currentGoat = goat; }
 
   private getGoats() {
     this._goats = [];
@@ -55,6 +72,7 @@ export class DashboardComponent {
     this._goatService.getGoats()
       .then(goats => this._goats = goats);
 
+    this.currentGoat = 0;
     return this._goats;
   }
 
