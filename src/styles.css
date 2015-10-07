@@ -83,6 +83,23 @@
   border: 1px solid #d7d7d7;
   border-radius: 3px;
   overflow: hidden;
+  -webkit-transform: translateY(0) scale(1);
+      -ms-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
+}
+.t-goat:nth-child(2) {
+  -webkit-transform: translateY(0.5rem) scale(0.98);
+      -ms-transform: translateY(0.5rem) scale(0.98);
+          transform: translateY(0.5rem) scale(0.98);
+  z-index: -1;
+}
+.t-goat:nth-child(3) {
+  -webkit-transform: translateY(1rem) scale(0.96);
+      -ms-transform: translateY(1rem) scale(0.96);
+          transform: translateY(1rem) scale(0.96);
+  z-index: -2;
 }
 
 *, *:before, *:after {
