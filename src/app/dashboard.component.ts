@@ -6,18 +6,19 @@ import {GoatService} from './goat.service';
 @Component({ selector: 'my-dashboard' })
 @View({
     template: `
-        <header class="t-header"></header>
+    	<div class="t-app">
+        <header class="t-header">goatinder</header>
         <main class="t-main">
-        <ul class="t-goats">
+	        <div class="t-goats">
 
-          <li *ng-for="#goat of goats" (click)="onSelect(goat)">
-            <img src="images/{{goat.image}}" alt="" class="t-photo">
-            <div class="t-info">
-                <span class="t-name">{{goat.name}}</span>
-                <span class="t-age">{{goat.age}}</span>
-            </div>
-          </li>
-        </ul>
+	          <div *ng-for="#goat of goats" class="t-goat" (click)="onSelect(goat)">
+	            <img src="images/{{goat.image}}" alt="" class="t-photo">
+	            <div class="t-info">
+	                <span class="t-name">{{goat.name}}</span>
+	                <span class="t-age">{{goat.age}}</span>
+	            </div>
+	          </div>
+	        </div>
 
           <div class="t-buttons">
             <button class="t-button dislike"></button>
@@ -25,6 +26,7 @@ import {GoatService} from './goat.service';
             <button class="t-button like"></button>
           </div>
         </main>
+       </div>
     `,
     directives: [NgFor, NgIf],
     // directives: [FORM_DIRECTIVES]
